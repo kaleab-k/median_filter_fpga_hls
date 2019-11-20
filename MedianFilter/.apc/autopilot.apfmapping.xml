@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="median.cpp" path="/home/kinka1/HLS/MedianFilter/median.cpp"/>
+    <originFiles name="median.h" path="/home/kinka1/HLS/MedianFilter/median.h"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="/home/kinka1/HLS/MedianFilter/main.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

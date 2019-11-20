@@ -1,0 +1,12 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+WARNING: [COSIM-369] AXI_master port 'in_array' has a depth of '10000'. Insufficient depth may result in simulation mismatch or freeze.
+WARNING: [COSIM-369] AXI_master port 'out_array' has a depth of '9604'. Insufficient depth may result in simulation mismatch or freeze.
+   Build using ""
+   Compiling main.cpp_pre.cpp.tb.cpp
+cosim.tv.mk:62: recipe for target 'obj/main.cpp_pre.cpp.tb.o' failed
+ERROR: [COSIM-317] C++ compile error.
+ERROR: [COSIM-321] EXE file generate failed.
+ERROR: [COSIM-321] EXE file generate failed.
+ERROR: [COSIM-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM-4] *** C/RTL co-simulation finished: FAIL ***

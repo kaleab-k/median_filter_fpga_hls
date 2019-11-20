@@ -1,0 +1,93 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_filter_wrapper_top glbl -prj filter_wrapper.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims --initfile /opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s filter_wrapper -debug wave 
+Multi-threading is on. Using 6 slave threads.
+Determining compilation order of HDL files.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/kalex/MedianFilter/solution3/sim/vhdl/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/AESL_sim_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/read_pixels_from_str.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity read_pixels_from_str
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/filter_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity filter_wrapper
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/filter_wrapper_AXILiteS_s_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity filter_wrapper_AXILiteS_s_axi
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/write_pixels_to_stre.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity write_pixels_to_stre
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/AESL_axi_master_gmem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity AESL_axi_master_gmem
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/filter_wrapper.autotb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity apatb_filter_wrapper_top
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/AESL_axi_slave_AXILiteS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity AESL_axi_slave_AXILiteS
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/start_for_filter_U0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity start_for_filter_U0_shiftReg
+INFO: [VRFC 10-307] analyzing entity start_for_filter_U0
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/bubble_sort.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bubble_sort
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/fifo_w32_d1024_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fifo_w32_d1024_A
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/fifo_w32_d2_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fifo_w32_d2_A_shiftReg
+INFO: [VRFC 10-307] analyzing entity fifo_w32_d2_A
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/filter_wrapper_gmem_m_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity filter_wrapper_gmem_m_axi
+INFO: [VRFC 10-307] analyzing entity filter_wrapper_gmem_m_axi_reg_slice
+INFO: [VRFC 10-307] analyzing entity filter_wrapper_gmem_m_axi_fifo
+INFO: [VRFC 10-307] analyzing entity filter_wrapper_gmem_m_axi_buffer
+INFO: [VRFC 10-307] analyzing entity filter_wrapper_gmem_m_axi_decoder
+INFO: [VRFC 10-307] analyzing entity filter_wrapper_gmem_m_axi_throttl
+INFO: [VRFC 10-307] analyzing entity filter_wrapper_gmem_m_axi_read
+INFO: [VRFC 10-307] analyzing entity filter_wrapper_gmem_m_axi_write
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/filter_temp_array_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity filter_temp_array_0_ram
+INFO: [VRFC 10-307] analyzing entity filter_temp_array_0
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/kalex/MedianFilter/solution3/sim/vhdl/filter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity filter
+Starting static elaboration
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/xhdhdnobkup2/mounicav/xsimsource/xsim_HEAD/data/vhdl/src/ieee_2008/numeric_std-body.vhdl:3367]
+WARNING: [VRFC 10-1303] range is empty (null range) [/home/kalex/MedianFilter/solution3/sim/vhdl/filter_wrapper_gmem_m_axi.vhd:695]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling module work.glbl
+Compiling architecture behave of entity xil_defaultlib.filter_wrapper_AXILiteS_s_axi [filter_wrapper_axilites_s_axi_de...]
+Compiling architecture behav of entity xil_defaultlib.filter_wrapper_gmem_m_axi_throttl [\filter_wrapper_gmem_m_axi_throt...]
+Compiling architecture behav of entity xil_defaultlib.filter_wrapper_gmem_m_axi_throttl [\filter_wrapper_gmem_m_axi_throt...]
+Compiling architecture behave of entity xil_defaultlib.filter_wrapper_gmem_m_axi_fifo [\filter_wrapper_gmem_m_axi_fifo(...]
+Compiling architecture behave of entity xil_defaultlib.filter_wrapper_gmem_m_axi_reg_slice [\filter_wrapper_gmem_m_axi_reg_s...]
+Compiling architecture behave of entity xil_defaultlib.filter_wrapper_gmem_m_axi_fifo [\filter_wrapper_gmem_m_axi_fifo(...]
+Compiling architecture arch of entity xil_defaultlib.filter_wrapper_gmem_m_axi_buffer [\filter_wrapper_gmem_m_axi_buffe...]
+Compiling architecture behave of entity xil_defaultlib.filter_wrapper_gmem_m_axi_fifo [\filter_wrapper_gmem_m_axi_fifo(...]
+Compiling architecture behave of entity xil_defaultlib.filter_wrapper_gmem_m_axi_fifo [\filter_wrapper_gmem_m_axi_fifo(...]
+Compiling architecture behave of entity xil_defaultlib.filter_wrapper_gmem_m_axi_write [\filter_wrapper_gmem_m_axi_write...]
+Compiling architecture arch of entity xil_defaultlib.filter_wrapper_gmem_m_axi_buffer [\filter_wrapper_gmem_m_axi_buffe...]
+Compiling architecture behave of entity xil_defaultlib.filter_wrapper_gmem_m_axi_reg_slice [\filter_wrapper_gmem_m_axi_reg_s...]
+Compiling architecture behave of entity xil_defaultlib.filter_wrapper_gmem_m_axi_read [\filter_wrapper_gmem_m_axi_read(...]
+Compiling architecture behave of entity xil_defaultlib.filter_wrapper_gmem_m_axi [\filter_wrapper_gmem_m_axi(max_r...]
+Compiling architecture behav of entity xil_defaultlib.write_pixels_to_stre [write_pixels_to_stre_default]
+Compiling architecture rtl of entity xil_defaultlib.filter_temp_array_0_ram [\filter_temp_array_0_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.filter_temp_array_0 [filter_temp_array_0_default]
+Compiling architecture behav of entity xil_defaultlib.bubble_sort [bubble_sort_default]
+Compiling architecture behav of entity xil_defaultlib.filter [filter_default]
+Compiling architecture behav of entity xil_defaultlib.read_pixels_from_str [read_pixels_from_str_default]
+Compiling architecture arch of entity xil_defaultlib.fifo_w32_d1024_A [\fifo_w32_d1024_A(1,5)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w32_d2_A_shiftReg [fifo_w32_d2_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w32_d2_A [\fifo_w32_d2_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_filter_U0_shiftReg [start_for_filter_u0_shiftreg_def...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_filter_U0 [\start_for_filter_U0(1,4)\]
+Compiling architecture behav of entity xil_defaultlib.filter_wrapper [filter_wrapper_default]
+Compiling architecture behav of entity xil_defaultlib.AESL_axi_master_gmem [aesl_axi_master_gmem_default]
+Compiling architecture behav of entity xil_defaultlib.AESL_axi_slave_AXILiteS [aesl_axi_slave_axilites_default]
+Compiling architecture behav of entity xil_defaultlib.apatb_filter_wrapper_top
+Built simulation snapshot filter_wrapper

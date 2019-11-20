@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../main.cpp in debug mode
+csim.mk:76: recipe for target 'obj/main.o' failed
+../../../main.cpp: In function ‘int main()’:
+../../../main.cpp:73:36: error: cannot convert ‘hls::stream<unsigned int>’ to ‘Input_Type* {aka unsigned int*}’ for argument ‘1’ to ‘void filter_wrapper(Input_Type*, T_output*)’
+make: *** [obj/main.o] Error 1
+CRITICAL WARNING: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

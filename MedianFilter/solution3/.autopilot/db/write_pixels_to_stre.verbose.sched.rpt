@@ -1,0 +1,242 @@
+
+
+================================================================
+== Vivado HLS Report for 'write_pixels_to_stre'
+================================================================
+* Date:           Thu Dec  6 13:20:24 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        MedianFilter
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.75|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  360009|  360009|  360009|  360009|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------+--------+--------+----------+-----------+-----------+--------+----------+
+        |                               |     Latency     | Iteration|  Initiation Interval  |  Trip  |          |
+        |           Loop Name           |   min  |   max  |  Latency |  achieved |   target  |  Count | Pipelined|
+        +-------------------------------+--------+--------+----------+-----------+-----------+--------+----------+
+        |- write_pixels_to_stream_loop  |  360001|  360001|         3|          1|          1|  360000|    yes   |
+        +-------------------------------+--------+--------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 8 9 10 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	11  / (exitcond_i_i)
+	9  / (!exitcond_i_i)
+9 --> 
+	10  / true
+10 --> 
+	8  / true
+11 --> 
+
+* FSM state operations: 
+
+ <State 1> : 8.75ns
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%in_array_offset_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %in_array_offset)"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%in_array_offset1_i_i = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %in_array_offset_read, i32 2, i32 31)"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%sext_i_i = zext i30 %in_array_offset1_i_i to i64"
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%in_array_addr = getelementptr i32* %in_array, i64 %sext_i_i"
+ST_1 : Operation 16 [7/7] (8.75ns)   --->   "%in_array_addr_i_i_rd = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %in_array_addr, i32 360000)" [MedianFilter/median.cpp:6]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 2> : 8.75ns
+ST_2 : Operation 17 [6/7] (8.75ns)   --->   "%in_array_addr_i_i_rd = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %in_array_addr, i32 360000)" [MedianFilter/median.cpp:6]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 3> : 8.75ns
+ST_3 : Operation 18 [5/7] (8.75ns)   --->   "%in_array_addr_i_i_rd = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %in_array_addr, i32 360000)" [MedianFilter/median.cpp:6]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 4> : 8.75ns
+ST_4 : Operation 19 [4/7] (8.75ns)   --->   "%in_array_addr_i_i_rd = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %in_array_addr, i32 360000)" [MedianFilter/median.cpp:6]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 5> : 8.75ns
+ST_5 : Operation 20 [3/7] (8.75ns)   --->   "%in_array_addr_i_i_rd = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %in_array_addr, i32 360000)" [MedianFilter/median.cpp:6]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 6> : 8.75ns
+ST_6 : Operation 21 [2/7] (8.75ns)   --->   "%in_array_addr_i_i_rd = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %in_array_addr, i32 360000)" [MedianFilter/median.cpp:6]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 7> : 8.75ns
+ST_7 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str25, i32 0, i32 0, [1 x i8]* @p_str26, [1 x i8]* @p_str27, [1 x i8]* @p_str28, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str29, [1 x i8]* @p_str30)"
+ST_7 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str25, i32 0, i32 0, [1 x i8]* @p_str26, [1 x i8]* @p_str27, [1 x i8]* @p_str28, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str29, [1 x i8]* @p_str30)"
+ST_7 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_array, [6 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 400000, [1 x i8]* @p_str1, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 2, i32 2, i32 256, i32 256, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_7 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_array, [6 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 400000, [1 x i8]* @p_str1, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 2, i32 2, i32 256, i32 256, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_7 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %out_array_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str16, [1 x i8]* @p_str17, [1 x i8]* @p_str18, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str19, [1 x i8]* @p_str20)"
+ST_7 : Operation 27 [1/1] (0.00ns)   --->   "%out_array_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %out_array)"
+ST_7 : Operation 28 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %out_array_out, i32 %out_array_read)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_7 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str25, i32 0, i32 0, [1 x i8]* @p_str26, [1 x i8]* @p_str27, [1 x i8]* @p_str28, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str29, [1 x i8]* @p_str30)"
+ST_7 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_array, [6 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 400000, [1 x i8]* @p_str1, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 2, i32 2, i32 256, i32 256, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_7 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str25, i32 0, i32 0, [1 x i8]* @p_str26, [1 x i8]* @p_str27, [1 x i8]* @p_str28, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str29, [1 x i8]* @p_str30)"
+ST_7 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_array, [6 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 400000, [1 x i8]* @p_str1, [6 x i8]* @p_str8, [1 x i8]* @p_str1, i32 2, i32 2, i32 256, i32 256, [1 x i8]* @p_str1, [1 x i8]* @p_str1)"
+ST_7 : Operation 33 [1/7] (8.75ns)   --->   "%in_array_addr_i_i_rd = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %in_array_addr, i32 360000)" [MedianFilter/median.cpp:6]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 34 [1/1] (1.76ns)   --->   "br label %0" [MedianFilter/median.cpp:5]
+
+ <State 8> : 2.44ns
+ST_8 : Operation 35 [1/1] (0.00ns)   --->   "%i_i_i = phi i19 [ 0, %entry ], [ %i, %1 ]"
+ST_8 : Operation 36 [1/1] (2.43ns)   --->   "%exitcond_i_i = icmp eq i19 %i_i_i, -164288" [MedianFilter/median.cpp:5]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 37 [1/1] (2.16ns)   --->   "%i = add i19 %i_i_i, 1" [MedianFilter/median.cpp:5]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 38 [1/1] (0.00ns)   --->   "br i1 %exitcond_i_i, label %.exit, label %1" [MedianFilter/median.cpp:5]
+
+ <State 9> : 8.75ns
+ST_9 : Operation 39 [1/1] (8.75ns)   --->   "%temp = call i32 @_ssdm_op_Read.m_axi.i32P(i32* %in_array_addr)" [MedianFilter/median.cpp:6]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 10> : 3.63ns
+ST_10 : Operation 40 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 360000, i64 360000, i64 360000)"
+ST_10 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([28 x i8]* @p_str) nounwind" [MedianFilter/median.cpp:5]
+ST_10 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_2_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([28 x i8]* @p_str)" [MedianFilter/median.cpp:5]
+ST_10 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [MedianFilter/median.cpp:6]
+ST_10 : Operation 44 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %in_stream_V, i32 %temp)" [MedianFilter/median.cpp:7]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_10 : Operation 45 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([28 x i8]* @p_str, i32 %tmp_2_i_i)" [MedianFilter/median.cpp:8]
+ST_10 : Operation 46 [1/1] (0.00ns)   --->   "br label %0" [MedianFilter/median.cpp:5]
+
+ <State 11> : 0.00ns
+ST_11 : Operation 47 [1/1] (0.00ns)   --->   "ret void"
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 8.75ns
+The critical path consists of the following:
+	wire read on port 'in_array_offset' [12]  (0 ns)
+	'getelementptr' operation ('in_array_addr') [20]  (0 ns)
+	bus request on port 'in_array' (MedianFilter/median.cpp:6) [21]  (8.75 ns)
+
+ <State 2>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_array' (MedianFilter/median.cpp:6) [21]  (8.75 ns)
+
+ <State 3>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_array' (MedianFilter/median.cpp:6) [21]  (8.75 ns)
+
+ <State 4>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_array' (MedianFilter/median.cpp:6) [21]  (8.75 ns)
+
+ <State 5>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_array' (MedianFilter/median.cpp:6) [21]  (8.75 ns)
+
+ <State 6>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_array' (MedianFilter/median.cpp:6) [21]  (8.75 ns)
+
+ <State 7>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_array' (MedianFilter/median.cpp:6) [21]  (8.75 ns)
+
+ <State 8>: 2.44ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', MedianFilter/median.cpp:5) [24]  (0 ns)
+	'icmp' operation ('exitcond_i_i', MedianFilter/median.cpp:5) [25]  (2.44 ns)
+
+ <State 9>: 8.75ns
+The critical path consists of the following:
+	bus read on port 'in_array' (MedianFilter/median.cpp:6) [33]  (8.75 ns)
+
+ <State 10>: 3.63ns
+The critical path consists of the following:
+	fifo write on port 'in_stream_V' (MedianFilter/median.cpp:7) [34]  (3.63 ns)
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

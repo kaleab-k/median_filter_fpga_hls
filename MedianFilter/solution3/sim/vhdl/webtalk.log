@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Dec  6 12:49:16 2018
+# Process ID: 12658
+# Current directory: /home/kalex/MedianFilter/solution3/sim/vhdl
+# Command line: wbtcv -mode batch -source /home/kalex/MedianFilter/solution3/sim/vhdl/xsim.dir/filter_wrapper/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/kalex/MedianFilter/solution3/sim/vhdl/webtalk.log
+# Journal file: /home/kalex/MedianFilter/solution3/sim/vhdl/webtalk.jou
+#-----------------------------------------------------------
+source /home/kalex/MedianFilter/solution3/sim/vhdl/xsim.dir/filter_wrapper/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Dec  6 12:49:16 2018...

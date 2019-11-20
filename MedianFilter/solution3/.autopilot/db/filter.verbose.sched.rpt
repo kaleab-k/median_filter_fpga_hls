@@ -1,0 +1,332 @@
+
+
+================================================================
+== Vivado HLS Report for 'filter'
+================================================================
+* Date:           Thu Dec  6 13:20:25 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        MedianFilter
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.69|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  360014|  360014|  360014|  360014|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------+--------+--------+----------+-----------+-----------+--------+----------+
+        |                           |     Latency     | Iteration|  Initiation Interval  |  Trip  |          |
+        |         Loop Name         |   min  |   max  |  Latency |  achieved |   target  |  Count | Pipelined|
+        +---------------------------+--------+--------+----------+-----------+-----------+--------+----------+
+        |- filter_rows_filter_cols  |  360012|  360012|        14|          1|          1|  360000|    yes   |
+        +---------------------------+--------+--------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 14
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 14, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	16  / (exitcond_flatten)
+	4  / (!exitcond_flatten)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	2  / true
+16 --> 
+
+* FSM state operations: 
+
+ <State 1> : 1.77ns
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%crop_2_1 = alloca i32"
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%crop_0_0 = alloca i32"
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%crop_0_1 = alloca i32"
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%crop_2_0 = alloca i32"
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%crop_1_0 = alloca i32"
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%crop_1_1 = alloca i32"
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str32, i32 0, i32 0, [1 x i8]* @p_str33, [1 x i8]* @p_str34, [1 x i8]* @p_str35, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str36, [1 x i8]* @p_str37)"
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str25, i32 0, i32 0, [1 x i8]* @p_str26, [1 x i8]* @p_str27, [1 x i8]* @p_str28, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str29, [1 x i8]* @p_str30)"
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%temp_array_0 = alloca [600 x i32], align 16" [MedianFilter/median.cpp:47]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 600> <RAM>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%temp_array_1 = alloca [600 x i32], align 16" [MedianFilter/median.cpp:47]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 600> <RAM>
+ST_1 : Operation 27 [1/1] (1.76ns)   --->   "br label %1" [MedianFilter/median.cpp:50]
+
+ <State 2> : 6.39ns
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i19 [ 0, %0 ], [ %indvar_flatten_next, %._crit_edge ]"
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%i = phi i10 [ 0, %0 ], [ %i_mid2, %._crit_edge ]" [MedianFilter/median.cpp:51]
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%j = phi i10 [ 0, %0 ], [ %j_1, %._crit_edge ]"
+ST_2 : Operation 31 [1/1] (2.43ns)   --->   "%exitcond_flatten = icmp eq i19 %indvar_flatten, -164288"   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (2.16ns)   --->   "%indvar_flatten_next = add i19 %indvar_flatten, 1"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (1.77ns)   --->   "%exitcond = icmp eq i10 %j, -424" [MedianFilter/median.cpp:51]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (1.37ns)   --->   "%j_mid2 = select i1 %exitcond, i10 0, i10 %j" [MedianFilter/median.cpp:51]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (1.95ns)   --->   "%i_s = add i10 %i, 1" [MedianFilter/median.cpp:50]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%tmp = call i9 @_ssdm_op_PartSelect.i9.i10.i32.i32(i10 %i_s, i32 1, i32 9)" [MedianFilter/median.cpp:70]
+ST_2 : Operation 37 [1/1] (1.66ns)   --->   "%icmp = icmp ne i9 %tmp, 0" [MedianFilter/median.cpp:70]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_1 = call i9 @_ssdm_op_PartSelect.i9.i10.i32.i32(i10 %i, i32 1, i32 9)" [MedianFilter/median.cpp:70]
+ST_2 : Operation 39 [1/1] (1.66ns)   --->   "%icmp1 = icmp ne i9 %tmp_1, 0" [MedianFilter/median.cpp:70]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node or_cond)   --->   "%tmp_mid2 = select i1 %exitcond, i1 %icmp, i1 %icmp1" [MedianFilter/median.cpp:70]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (1.37ns)   --->   "%i_mid2 = select i1 %exitcond, i10 %i_s, i10 %i" [MedianFilter/median.cpp:51]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_8 = zext i10 %j_mid2 to i64" [MedianFilter/median.cpp:61]
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%temp_array_0_addr = getelementptr [600 x i32]* %temp_array_0, i64 0, i64 %tmp_8" [MedianFilter/median.cpp:61]
+ST_2 : Operation 44 [2/2] (3.25ns)   --->   "%crop_0_2 = load i32* %temp_array_0_addr, align 4" [MedianFilter/median.cpp:61]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 600> <RAM>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%temp_array_1_addr = getelementptr [600 x i32]* %temp_array_1, i64 0, i64 %tmp_8" [MedianFilter/median.cpp:61]
+ST_2 : Operation 46 [2/2] (3.25ns)   --->   "%crop_1_2 = load i32* %temp_array_1_addr, align 4" [MedianFilter/median.cpp:61]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 600> <RAM>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_3 = call i9 @_ssdm_op_PartSelect.i9.i10.i32.i32(i10 %j_mid2, i32 1, i32 9)" [MedianFilter/median.cpp:70]
+ST_2 : Operation 48 [1/1] (1.66ns)   --->   "%icmp2 = icmp ne i9 %tmp_3, 0" [MedianFilter/median.cpp:70]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 49 [1/1] (1.37ns) (out node of the LUT)   --->   "%or_cond = and i1 %tmp_mid2, %icmp2" [MedianFilter/median.cpp:70]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "br i1 %or_cond, label %2, label %._crit_edge" [MedianFilter/median.cpp:70]
+ST_2 : Operation 51 [1/1] (1.95ns)   --->   "%j_1 = add i10 %j_mid2, 1" [MedianFilter/median.cpp:51]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 3> : 6.89ns
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%crop_2_1_load = load i32* %crop_2_1"
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%crop_0_0_load = load i32* %crop_0_0" [MedianFilter/median.cpp:69]
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%crop_0_1_load = load i32* %crop_0_1"
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%crop_2_0_load = load i32* %crop_2_0" [MedianFilter/median.cpp:69]
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%crop_1_0_load = load i32* %crop_1_0" [MedianFilter/median.cpp:69]
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%crop_1_1_load = load i32* %crop_1_1"
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "store i32 %crop_1_1_load, i32* %crop_1_0"
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "store i32 %crop_2_1_load, i32* %crop_2_0"
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "store i32 %crop_0_1_load, i32* %crop_0_0"
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "br i1 %exitcond_flatten, label %3, label %.reset"
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%crop_2_1_load_1 = load i32* %crop_2_1" [MedianFilter/median.cpp:69]
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%crop_0_1_load_1 = load i32* %crop_0_1" [MedianFilter/median.cpp:69]
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%crop_1_1_load_1 = load i32* %crop_1_1" [MedianFilter/median.cpp:69]
+ST_3 : Operation 65 [1/1] (3.63ns)   --->   "%tmp_5 = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %in_stream_V)" [MedianFilter/median.cpp:53]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_3 : Operation 66 [1/2] (3.25ns)   --->   "%crop_0_2 = load i32* %temp_array_0_addr, align 4" [MedianFilter/median.cpp:61]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 600> <RAM>
+ST_3 : Operation 67 [1/2] (3.25ns)   --->   "%crop_1_2 = load i32* %temp_array_1_addr, align 4" [MedianFilter/median.cpp:61]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 600> <RAM>
+ST_3 : Operation 68 [1/1] (3.25ns)   --->   "store i32 %crop_1_2, i32* %temp_array_0_addr, align 4" [MedianFilter/median.cpp:66]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 600> <RAM>
+ST_3 : Operation 69 [1/1] (3.25ns)   --->   "store i32 %tmp_5, i32* %temp_array_1_addr, align 4" [MedianFilter/median.cpp:68]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 600> <RAM>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "store i32 %crop_1_2, i32* %crop_1_1" [MedianFilter/median.cpp:61]
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "store i32 %crop_0_2, i32* %crop_0_1" [MedianFilter/median.cpp:61]
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "store i32 %tmp_5, i32* %crop_2_1" [MedianFilter/median.cpp:53]
+
+ <State 4> : 7.69ns
+ST_4 : Operation 73 [12/12] (7.68ns)   --->   "%tmp_4 = call fastcc i32 @bubble_sort(i32 %crop_0_0_load, i32 %crop_0_1_load_1, i32 %crop_0_2, i32 %crop_1_0_load, i32 %crop_1_1_load_1, i32 %crop_1_2, i32 %crop_2_0_load, i32 %crop_2_1_load_1, i32 %tmp_5)" [MedianFilter/median.cpp:69]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 5> : 7.69ns
+ST_5 : Operation 74 [11/12] (7.68ns)   --->   "%tmp_4 = call fastcc i32 @bubble_sort(i32 %crop_0_0_load, i32 %crop_0_1_load_1, i32 %crop_0_2, i32 %crop_1_0_load, i32 %crop_1_1_load_1, i32 %crop_1_2, i32 %crop_2_0_load, i32 %crop_2_1_load_1, i32 %tmp_5)" [MedianFilter/median.cpp:69]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 6> : 7.69ns
+ST_6 : Operation 75 [10/12] (7.68ns)   --->   "%tmp_4 = call fastcc i32 @bubble_sort(i32 %crop_0_0_load, i32 %crop_0_1_load_1, i32 %crop_0_2, i32 %crop_1_0_load, i32 %crop_1_1_load_1, i32 %crop_1_2, i32 %crop_2_0_load, i32 %crop_2_1_load_1, i32 %tmp_5)" [MedianFilter/median.cpp:69]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 7> : 7.69ns
+ST_7 : Operation 76 [9/12] (7.68ns)   --->   "%tmp_4 = call fastcc i32 @bubble_sort(i32 %crop_0_0_load, i32 %crop_0_1_load_1, i32 %crop_0_2, i32 %crop_1_0_load, i32 %crop_1_1_load_1, i32 %crop_1_2, i32 %crop_2_0_load, i32 %crop_2_1_load_1, i32 %tmp_5)" [MedianFilter/median.cpp:69]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 8> : 7.69ns
+ST_8 : Operation 77 [8/12] (7.68ns)   --->   "%tmp_4 = call fastcc i32 @bubble_sort(i32 %crop_0_0_load, i32 %crop_0_1_load_1, i32 %crop_0_2, i32 %crop_1_0_load, i32 %crop_1_1_load_1, i32 %crop_1_2, i32 %crop_2_0_load, i32 %crop_2_1_load_1, i32 %tmp_5)" [MedianFilter/median.cpp:69]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 9> : 7.69ns
+ST_9 : Operation 78 [7/12] (7.68ns)   --->   "%tmp_4 = call fastcc i32 @bubble_sort(i32 %crop_0_0_load, i32 %crop_0_1_load_1, i32 %crop_0_2, i32 %crop_1_0_load, i32 %crop_1_1_load_1, i32 %crop_1_2, i32 %crop_2_0_load, i32 %crop_2_1_load_1, i32 %tmp_5)" [MedianFilter/median.cpp:69]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 10> : 7.69ns
+ST_10 : Operation 79 [6/12] (7.68ns)   --->   "%tmp_4 = call fastcc i32 @bubble_sort(i32 %crop_0_0_load, i32 %crop_0_1_load_1, i32 %crop_0_2, i32 %crop_1_0_load, i32 %crop_1_1_load_1, i32 %crop_1_2, i32 %crop_2_0_load, i32 %crop_2_1_load_1, i32 %tmp_5)" [MedianFilter/median.cpp:69]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 11> : 7.69ns
+ST_11 : Operation 80 [5/12] (7.68ns)   --->   "%tmp_4 = call fastcc i32 @bubble_sort(i32 %crop_0_0_load, i32 %crop_0_1_load_1, i32 %crop_0_2, i32 %crop_1_0_load, i32 %crop_1_1_load_1, i32 %crop_1_2, i32 %crop_2_0_load, i32 %crop_2_1_load_1, i32 %tmp_5)" [MedianFilter/median.cpp:69]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 12> : 7.69ns
+ST_12 : Operation 81 [4/12] (7.68ns)   --->   "%tmp_4 = call fastcc i32 @bubble_sort(i32 %crop_0_0_load, i32 %crop_0_1_load_1, i32 %crop_0_2, i32 %crop_1_0_load, i32 %crop_1_1_load_1, i32 %crop_1_2, i32 %crop_2_0_load, i32 %crop_2_1_load_1, i32 %tmp_5)" [MedianFilter/median.cpp:69]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 13> : 7.69ns
+ST_13 : Operation 82 [3/12] (7.68ns)   --->   "%tmp_4 = call fastcc i32 @bubble_sort(i32 %crop_0_0_load, i32 %crop_0_1_load_1, i32 %crop_0_2, i32 %crop_1_0_load, i32 %crop_1_1_load_1, i32 %crop_1_2, i32 %crop_2_0_load, i32 %crop_2_1_load_1, i32 %tmp_5)" [MedianFilter/median.cpp:69]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 14> : 7.69ns
+ST_14 : Operation 83 [2/12] (7.68ns)   --->   "%tmp_4 = call fastcc i32 @bubble_sort(i32 %crop_0_0_load, i32 %crop_0_1_load_1, i32 %crop_0_2, i32 %crop_1_0_load, i32 %crop_1_1_load_1, i32 %crop_1_2, i32 %crop_2_0_load, i32 %crop_2_1_load_1, i32 %tmp_5)" [MedianFilter/median.cpp:69]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 15> : 7.48ns
+ST_15 : Operation 84 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([24 x i8]* @filter_rows_filter_c)"
+ST_15 : Operation 85 [1/1] (0.00ns)   --->   "%empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 360000, i64 360000, i64 360000)"
+ST_15 : Operation 86 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str6) nounwind" [MedianFilter/median.cpp:51]
+ST_15 : Operation 87 [1/1] (0.00ns)   --->   "%tmp_9 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str6)" [MedianFilter/median.cpp:51]
+ST_15 : Operation 88 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [MedianFilter/median.cpp:52]
+ST_15 : Operation 89 [1/12] (3.84ns)   --->   "%tmp_4 = call fastcc i32 @bubble_sort(i32 %crop_0_0_load, i32 %crop_0_1_load_1, i32 %crop_0_2, i32 %crop_1_0_load, i32 %crop_1_1_load_1, i32 %crop_1_2, i32 %crop_2_0_load, i32 %crop_2_1_load_1, i32 %tmp_5)" [MedianFilter/median.cpp:69]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 90 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_stream_V, i32 %tmp_4)" [MedianFilter/median.cpp:71]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_15 : Operation 91 [1/1] (0.00ns)   --->   "br label %._crit_edge" [MedianFilter/median.cpp:71]
+ST_15 : Operation 92 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str6, i32 %tmp_9)" [MedianFilter/median.cpp:72]
+ST_15 : Operation 93 [1/1] (0.00ns)   --->   "br label %1"
+
+ <State 16> : 0.00ns
+ST_16 : Operation 94 [1/1] (0.00ns)   --->   "ret void" [MedianFilter/median.cpp:74]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [15]  (1.77 ns)
+
+ <State 2>: 6.39ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', MedianFilter/median.cpp:51) [17]  (0 ns)
+	'icmp' operation ('exitcond', MedianFilter/median.cpp:51) [36]  (1.77 ns)
+	'select' operation ('j_mid2', MedianFilter/median.cpp:51) [37]  (1.37 ns)
+	'getelementptr' operation ('temp_array_0_addr', MedianFilter/median.cpp:61) [50]  (0 ns)
+	'load' operation ('crop[0][2]', MedianFilter/median.cpp:61) on array 'temp_array[0]', MedianFilter/median.cpp:47 [51]  (3.25 ns)
+
+ <State 3>: 6.89ns
+The critical path consists of the following:
+	fifo read on port 'in_stream_V' (MedianFilter/median.cpp:53) [48]  (3.63 ns)
+	'store' operation (MedianFilter/median.cpp:68) of variable 'tmp', MedianFilter/median.cpp:53 on array 'temp_array[1]', MedianFilter/median.cpp:47 [55]  (3.25 ns)
+
+ <State 4>: 7.69ns
+The critical path consists of the following:
+	'call' operation ('new_output', MedianFilter/median.cpp:69) to 'bubble_sort' [56]  (7.69 ns)
+
+ <State 5>: 7.69ns
+The critical path consists of the following:
+	'call' operation ('new_output', MedianFilter/median.cpp:69) to 'bubble_sort' [56]  (7.69 ns)
+
+ <State 6>: 7.69ns
+The critical path consists of the following:
+	'call' operation ('new_output', MedianFilter/median.cpp:69) to 'bubble_sort' [56]  (7.69 ns)
+
+ <State 7>: 7.69ns
+The critical path consists of the following:
+	'call' operation ('new_output', MedianFilter/median.cpp:69) to 'bubble_sort' [56]  (7.69 ns)
+
+ <State 8>: 7.69ns
+The critical path consists of the following:
+	'call' operation ('new_output', MedianFilter/median.cpp:69) to 'bubble_sort' [56]  (7.69 ns)
+
+ <State 9>: 7.69ns
+The critical path consists of the following:
+	'call' operation ('new_output', MedianFilter/median.cpp:69) to 'bubble_sort' [56]  (7.69 ns)
+
+ <State 10>: 7.69ns
+The critical path consists of the following:
+	'call' operation ('new_output', MedianFilter/median.cpp:69) to 'bubble_sort' [56]  (7.69 ns)
+
+ <State 11>: 7.69ns
+The critical path consists of the following:
+	'call' operation ('new_output', MedianFilter/median.cpp:69) to 'bubble_sort' [56]  (7.69 ns)
+
+ <State 12>: 7.69ns
+The critical path consists of the following:
+	'call' operation ('new_output', MedianFilter/median.cpp:69) to 'bubble_sort' [56]  (7.69 ns)
+
+ <State 13>: 7.69ns
+The critical path consists of the following:
+	'call' operation ('new_output', MedianFilter/median.cpp:69) to 'bubble_sort' [56]  (7.69 ns)
+
+ <State 14>: 7.69ns
+The critical path consists of the following:
+	'call' operation ('new_output', MedianFilter/median.cpp:69) to 'bubble_sort' [56]  (7.69 ns)
+
+ <State 15>: 7.48ns
+The critical path consists of the following:
+	'call' operation ('new_output', MedianFilter/median.cpp:69) to 'bubble_sort' [56]  (3.84 ns)
+	fifo write on port 'out_stream_V' (MedianFilter/median.cpp:71) [65]  (3.63 ns)
+
+ <State 16>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

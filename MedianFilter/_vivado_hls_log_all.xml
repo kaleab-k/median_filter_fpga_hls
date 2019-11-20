@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'write_pixels_to_stre13' to 'write_pixels_to_stre' (MedianFilter/median.cpp:5:59)" projectName="MedianFilter" solutionName="solution3" date="2018-12-06T13:20:24.813+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'read_pixels_from_stream' to 'read_pixels_from_str' (MedianFilter/median.cpp:13:60)" projectName="MedianFilter" solutionName="solution3" date="2018-12-06T13:20:24.231+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'write_pixels_to_stream' to 'write_pixels_to_stre' (MedianFilter/median.cpp:5:59)" projectName="MedianFilter" solutionName="solution3" date="2018-12-06T13:20:24.179+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'bubble_sort_inner_loop' (MedianFilter/median.cpp:32) because its parent loop or function is pipelined." projectName="MedianFilter" solutionName="solution3" date="2018-12-06T13:20:23.357+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'bubble_sort_mapping' (MedianFilter/median.cpp:26) because its parent loop or function is pipelined." projectName="MedianFilter" solutionName="solution3" date="2018-12-06T13:20:23.350+0100" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

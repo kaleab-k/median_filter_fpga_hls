@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="filter_wrapper" xd:componentRef="filter_wrapper" xd:initiationInterval="360029" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="in_array[]" xd:originalName="in_array" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="360000" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="out_array[]" xd:originalName="out_array" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="357604" xd:dataWidth="32" xd:bufferDirection="out"/>
+  <xd:arg xd:name="in_array" xd:originalName="in_array" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_gmem" xd:dataWidth="32" xd:offset="0x10" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="out_array" xd:originalName="out_array" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_gmem" xd:dataWidth="32" xd:offset="0x18" xd:handshakeRef="ap_none"/>
+  <xd:latencyEstimates xd:best-case="360028" xd:worst-case="360028" xd:average-case="360028"/>
+  <xd:resourceEstimates xd:LUT="7288" xd:FF="4623" xd:BRAM="10" xd:DSP="0"/>
+</xd:acceleratorMap>

@@ -1,0 +1,1284 @@
+INFO: [HLS 200-0] Workspace /home/kinka1/HLS/MedianFilter/solution3 opened at Thu Dec 06 13:20:15 CET 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Command     config_clock returned 0; 0 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.lib 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.lib 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_old.lib 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_vivado.lib 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/dsp48e1.hlp 
+Command       ap_source returned 0; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed medium 
+Command       config_chip_info returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.01 sec.
+Command     import_lib returned 0; 0.02 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.08 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.11 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.11 sec.
+Command     ap_source returned 0; 0.11 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
+Command         ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_hp.hlp 
+Command       ap_source returned 0; 0 sec.
+Command     import_lib returned 0; 0.02 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.01 sec.
+Command     ap_source returned 0; 0.01 sec.
+Execute     set_part xc7z020clg484-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart returned 1; 0.01 sec.
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Command         config_chip_info returned 0; 0 sec.
+Execute         config_chip_info -quiet -speed slow 
+Command         config_chip_info returned 0; 0 sec.
+Command       add_library returned 0; 0.01 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Command       add_library returned 0; 0 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Command     set_part returned 0; 0.05 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Command     config_chip_info returned 0; 0 sec.
+Execute     config_chip_info -quiet -speed slow 
+Command     config_chip_info returned 0; 0 sec.
+Command   open_solution returned 0; 0.22 sec.
+Execute   set_part xc7z020clg484-1 
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart returned 1; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed slow 
+Command       config_chip_info returned 0; 0 sec.
+Command     add_library returned 0; 0.01 sec.
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Command     add_library returned 0; 0 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Command   set_part returned 0; 0.05 sec.
+Execute   create_clock -period 10 -name default 
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Command     config_clock returned 0; 0 sec.
+Command   create_clock returned 0; 0 sec.
+Execute   source ./MedianFilter/solution3/directives.tcl 
+Execute     set_directive_stream -depth 1024 -dim 1 conv_stream out_stream 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+Command     set_directive_stream returned 0; 0 sec.
+Execute     set_directive_stream -depth 1024 -dim 1 conv_stream in_stream 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+Command     set_directive_stream returned 0; 0 sec.
+Execute     set_directive_pipeline write_pixels_to_stream/write_pixels_to_stream_loop 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+Command     set_directive_pipeline returned 0; 0 sec.
+Execute     set_directive_pipeline read_pixels_from_stream/read_pixels_from_stream_loop 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+Command     set_directive_pipeline returned 0; 0 sec.
+Execute     set_directive_pipeline bubble_sort/bubble_sort_inner_loop 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+Command     set_directive_pipeline returned 0; 0 sec.
+Execute     set_directive_unroll bubble_sort/bubble_sort_outer_loop 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+Command     set_directive_unroll returned 0; 0 sec.
+Execute     set_directive_pipeline bubble_sort/bubble_sort_mapping 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+Command     set_directive_pipeline returned 0; 0 sec.
+Execute     set_directive_pipeline filter/conv_cols 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+Command     set_directive_pipeline returned 0; 0 sec.
+Execute     set_directive_stream -depth 1024 -dim 1 filter_wrapper in_stream 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+Command     set_directive_stream returned 0; 0 sec.
+Execute     set_directive_stream -depth 1024 -dim 1 filter_wrapper out_stream 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+Command     set_directive_stream returned 0; 0 sec.
+Execute     set_directive_pipeline filter/filter_cols 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+Command     set_directive_pipeline returned 0; 0 sec.
+Execute     set_directive_interface -mode m_axi -depth 400000 -offset slave -num_read_outstanding 2 -num_write_outstanding 2 -max_read_burst_length 256 -max_write_burst_length 256 filter_wrapper in_array 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'INTERFACE' m_axi=positionBoolean0mode depth=400000 port=positionBooleanTextRequiredin_array offset=slave num_read_outstanding=2 num_write_outstanding=2 max_read_burst_length=256 max_write_burst_length=256 
+Command     set_directive_interface returned 0; 0.01 sec.
+Execute     set_directive_interface -mode s_axilite filter_wrapper 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'INTERFACE' m_axi=positionBoolean0mode depth=400000 port=positionBooleanTextRequiredin_array offset=slave num_read_outstanding=2 num_write_outstanding=2 max_read_burst_length=256 max_write_burst_length=256 
+INFO: [HLS 200-0] Setting directive 'INTERFACE' s_axilite=positionBoolean0mode port=positionBooleanTextRequiredreturn 
+Command     set_directive_interface returned 0; 0 sec.
+Execute     set_directive_interface -mode m_axi -depth 400000 -offset slave -num_read_outstanding 2 -num_write_outstanding 2 -max_read_burst_length 256 -max_write_burst_length 256 filter_wrapper out_array 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'INTERFACE' m_axi=positionBoolean0mode depth=400000 port=positionBooleanTextRequiredin_array offset=slave num_read_outstanding=2 num_write_outstanding=2 max_read_burst_length=256 max_write_burst_length=256 
+INFO: [HLS 200-0] Setting directive 'INTERFACE' s_axilite=positionBoolean0mode port=positionBooleanTextRequiredreturn 
+INFO: [HLS 200-0] Setting directive 'INTERFACE' m_axi=positionBoolean0mode depth=400000 port=positionBooleanTextRequiredout_array offset=slave num_read_outstanding=2 num_write_outstanding=2 max_read_burst_length=256 max_write_burst_length=256 
+Command     set_directive_interface returned 0; 0 sec.
+Execute     set_directive_dataflow filter_wrapper 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'INTERFACE' m_axi=positionBoolean0mode depth=400000 port=positionBooleanTextRequiredin_array offset=slave num_read_outstanding=2 num_write_outstanding=2 max_read_burst_length=256 max_write_burst_length=256 
+INFO: [HLS 200-0] Setting directive 'INTERFACE' s_axilite=positionBoolean0mode port=positionBooleanTextRequiredreturn 
+INFO: [HLS 200-0] Setting directive 'INTERFACE' m_axi=positionBoolean0mode depth=400000 port=positionBooleanTextRequiredout_array offset=slave num_read_outstanding=2 num_write_outstanding=2 max_read_burst_length=256 max_write_burst_length=256 
+INFO: [HLS 200-0] Setting directive 'DATAFLOW' 
+Command     set_directive_dataflow returned 0; 0 sec.
+Command   ap_source returned 0; 0.02 sec.
+Execute   csynth_design 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -VP9_rom_infer_simplify=0 -ng=0 -g=0 -opt_fp=0 -enable_clang39=0 
+INFO: [HLS 200-10] Analyzing design file 'MedianFilter/median.cpp' ...
+INFO: [HLS 200-0] Compiling one TU...
+Execute       is_m_axi_addr64 
+Command       is_m_axi_addr64 returned 0; 0 sec.
+INFO: [HLS 200-0] Handling MedianFilter/median.cpp as C++
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       is_encrypted MedianFilter/median.cpp 
+Command       is_encrypted returned 0; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "MedianFilter/median.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pp.0.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E MedianFilter/median.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pp.0.cpp
+Command       clang returned 0; 0.91 sec.
+INFO: [HLS 200-0] Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pp.0.cpp"  -o "/home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/useless.bc"  
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pp.0.cpp -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/useless.bc
+Command       clang returned 0; 0.92 sec.
+INFO: [HLS 200-0] GCC PP time: 1 seconds per iteration
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredin_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredout_stream depth=1024 dim=1 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'INTERFACE' m_axi=positionBoolean0mode depth=400000 port=positionBooleanTextRequiredin_array offset=slave num_read_outstanding=2 num_write_outstanding=2 max_read_burst_length=256 max_write_burst_length=256 
+INFO: [HLS 200-0] Setting directive 'INTERFACE' s_axilite=positionBoolean0mode port=positionBooleanTextRequiredreturn 
+INFO: [HLS 200-0] Setting directive 'INTERFACE' m_axi=positionBoolean0mode depth=400000 port=positionBooleanTextRequiredout_array offset=slave num_read_outstanding=2 num_write_outstanding=2 max_read_burst_length=256 max_write_burst_length=256 
+INFO: [HLS 200-0] Setting directive 'DATAFLOW' 
+Execute       list_core -type functional_unit 
+Command       list_core returned 0; 0 sec.
+INFO: [HLS 200-0] CDT Preprocessing...
+INFO: [HLS 200-0] Marker-Pragma convertor: /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pp.0.cpp /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pp.0.cpp.ap-line.cpp /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pp.0.cpp.ap-line.cpp.CXX 1
+INFO: [HLS 200-0] Converting Markers to Pragmas...
+Execute       cdt  "/home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pp.0.cpp.ap-line.cpp"  -m "filter_wrapper" -o "/home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pp.0.cpp.ap-cdt.cpp" --pp --directive /home/kinka1/HLS/MedianFilter/solution3/solution3.directive --source /home/kinka1/HLS/MedianFilter/median.cpp --error /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSP_Double_Pump_Mac16 DSP_Double_Pump_Mac8 DSP_Macro DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_fulldsp HAddSub_meddsp HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db --ca --es --gf --pd --p2d /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db --sd --scff /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/.systemc_flag --ad 
+Command       cdt returned 0; 0.94 sec.
+INFO: [HLS 200-0] Marker-Pragma convertor: /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pp.0.cpp.ap-cdt.cpp /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pragma.0.cpp /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pragma.0.cpp.ap-line.CXX 0
+INFO: [HLS 200-0] Converting Pragmas to Markers...
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Pragma Handling...
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pragma.2.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pragma.2.cpp
+Command       clang returned 0; 0.94 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Processing labels
+Execute       clang  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.g.bc" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2017.4/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot -I /opt/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.g.bc
+Command       clang returned 0; 0.92 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/ve_warning.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-10] Validating synthesis directives ...
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0 sec.
+WARNING: [HLS 200-40] Directive 'STREAM' cannot be applied: Function 'conv_stream' does not exist in any synthesis source file.
+WARNING: [HLS 200-40] Directive 'STREAM' cannot be applied: Function 'conv_stream' does not exist in any synthesis source file.
+WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Label 'bubble_sort_outer_loop' does not exist in function 'bubble_sort'.
+WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Label 'conv_cols' does not exist in function 'filter'.
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 353.613 ; gain = 13.578 ; free physical = 11731 ; free virtual = 14925
+INFO: [HLS 200-0] Linking Release ...
+Execute       llvm-ld /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.bc -hls-opt -except-internalize filter_wrapper -L/opt/Xilinx/Vivado/2017.4/lnx64/lib -lm_basic -lhlsmc++ -lhlsm -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o 
+Command       llvm-ld returned 0; 0.53 sec.
+Execute       disassemble /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o 
+Execute         is_encrypted /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.bc 
+Command         is_encrypted returned 0; 0 sec.
+Command       disassemble returned 0; 0.45 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-0] Linking Debug ...
+Execute       llvm-ld /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/median.g.bc -hls-opt -except-internalize filter_wrapper -L/opt/Xilinx/Vivado/2017.4/lnx64/lib -lm_basic -lhlsmc++ -lhlsm -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.g 
+Command       llvm-ld returned 0; 0.47 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 353.613 ; gain = 13.578 ; free physical = 11730 ; free virtual = 14925
+Execute       ::config_rtl 
+Command       config_rtl returned 0; 0 sec.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 -enable_clang39=0 -VP9_rom_infer_simplify=0 
+Execute         cleanup_all_models 
+Command         cleanup_all_models returned 0; 0 sec.
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.pp.bc -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.pp.0.bc -f 
+Command         transform returned 0; 0 sec.
+Execute         llvm-ld /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/Xilinx/Vivado/2017.4/lnx64/lib -lfloatconversion -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.g.0 
+Command         llvm-ld returned 0; 0.46 sec.
+INFO: [HLS 200-0] Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top filter_wrapper -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.g.0.bc -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform returned 0; 0.05 sec.
+Execute         disassemble /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.g.1 /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.g.1 
+Execute           is_encrypted /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.g.1.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.45 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 353.613 ; gain = 13.578 ; free physical = 11728 ; free virtual = 14923
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-0] Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.g.1.bc -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform returned 0; 0.05 sec.
+INFO: [HLS 200-0] Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.g.2.prechk.bc -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform returned 0; 0 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 353.613 ; gain = 13.578 ; free physical = 11729 ; free virtual = 14924
+INFO: [HLS 200-0] Compiler optimizing ...
+INFO: [HLS 200-0] Share syncheck's 1.bc for syn flow: copy /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.g.1.bc to /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.1.bc
+INFO: [HLS 200-0] Presyn 1...
+Execute         transform -hls -tmp /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -simplifycfg -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.1.bc -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'filter_cols' (MedianFilter/median.cpp:51) in function 'filter' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'bubble_sort' (MedianFilter/median.cpp:20).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'bubble_sort_mapping' (MedianFilter/median.cpp:26) because its parent loop or function is pipelined.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'bubble_sort_inner_loop' (MedianFilter/median.cpp:32) because its parent loop or function is pipelined.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (MedianFilter/median.cpp:56) in function 'filter' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1' (MedianFilter/median.cpp:57) in function 'filter' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.2' (MedianFilter/median.cpp:60) in function 'filter' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.3' (MedianFilter/median.cpp:65) in function 'filter' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (MedianFilter/median.cpp:24) in function 'bubble_sort' completely.
+INFO: [XFORM 203-501] Unrolling loop 'bubble_sort_mapping' (MedianFilter/median.cpp:26) in function 'bubble_sort' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (MedianFilter/median.cpp:31) in function 'bubble_sort' completely.
+INFO: [XFORM 203-501] Unrolling loop 'bubble_sort_inner_loop' (MedianFilter/median.cpp:32) in function 'bubble_sort' completely.
+INFO: [XFORM 203-102] Partitioning array 'CROP.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'CROP.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'CROP.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_array' (MedianFilter/median.cpp:47) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'crop' (MedianFilter/median.cpp:48) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'crop.0' (MedianFilter/median.cpp:48) automatically.
+INFO: [XFORM 203-102] Partitioning array 'crop.1' (MedianFilter/median.cpp:48) automatically.
+INFO: [XFORM 203-102] Partitioning array 'crop.2' (MedianFilter/median.cpp:48) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'filter_wrapper' (MedianFilter/median.cpp:76), detected/extracted 3 process function(s): 
+	 'write_pixels_to_stream'
+	 'filter'
+	 'read_pixels_from_stream'.
+Command         transform returned 0; 0.26 sec.
+INFO: [HLS 200-0] Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.1.tmp.bc -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform returned 0; 0.11 sec.
+Execute         disassemble /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.2 /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.2 
+Execute           is_encrypted /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.2.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.47 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 481.613 ; gain = 141.578 ; free physical = 11708 ; free virtual = 14903
+INFO: [HLS 200-0] Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -directive-preproc -interface-gen -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -check-stream -norm-name -legalize -validate-dataflow -cdfg-build /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.2.bc -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'filter_rows' (MedianFilter/median.cpp:50:45) in function 'filter'.
+WARNING: [XFORM 203-631] Renaming function 'write_pixels_to_stream' to 'write_pixels_to_stre' (MedianFilter/median.cpp:5:59)
+WARNING: [XFORM 203-631] Renaming function 'read_pixels_from_stream' to 'read_pixels_from_str' (MedianFilter/median.cpp:13:60)
+INFO: [XFORM 203-811] Inferring bus burst write of length 357604 on port 'out_array' (MedianFilter/median.cpp:16:3).
+INFO: [XFORM 203-811] Inferring bus burst read of length 360000 on port 'in_array' (MedianFilter/median.cpp:6:32).
+WARNING: [XFORM 203-631] Renaming function 'write_pixels_to_stre13' to 'write_pixels_to_stre' (MedianFilter/median.cpp:5:59)
+Command         transform returned 0; 0.22 sec.
+Execute         disassemble /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.3 /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.3 
+Execute           is_encrypted /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.o.3.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.46 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 481.613 ; gain = 141.578 ; free physical = 11681 ; free virtual = 14876
+INFO: [HLS 200-0] Finish building internal data model.
+Command       opt_and_import_c returned 0; 2.53 sec.
+Command     elaborate returned 0; 8.72 sec.
+Execute     autosyn 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-0] Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'filter_wrapper' ...
+Execute       ap_set_top_model filter_wrapper 
+Command       ap_set_top_model returned 0; 0 sec.
+Execute       get_model_list filter_wrapper -filter all-wo-channel -topdown 
+Command       get_model_list returned 0; 0 sec.
+Execute       preproc_iomode -model filter_wrapper 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model read_pixels_from_str 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model filter 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model bubble_sort 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model write_pixels_to_stre 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       get_model_list filter_wrapper -filter all-wo-channel 
+Command       get_model_list returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for configure: write_pixels_to_stre bubble_sort filter read_pixels_from_str filter_wrapper
+INFO: [HLS 200-0] Configuring Module : write_pixels_to_stre ...
+Execute       set_default_model write_pixels_to_stre 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit write_pixels_to_stre 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : bubble_sort ...
+Execute       set_default_model bubble_sort 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit bubble_sort 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : filter ...
+Execute       set_default_model filter 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit filter 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : read_pixels_from_str ...
+Execute       set_default_model read_pixels_from_str 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit read_pixels_from_str 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : filter_wrapper ...
+Execute       set_default_model filter_wrapper 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit filter_wrapper 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for preprocess: write_pixels_to_stre bubble_sort filter read_pixels_from_str filter_wrapper
+INFO: [HLS 200-0] Preprocessing Module: write_pixels_to_stre ...
+Execute       set_default_model write_pixels_to_stre 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model write_pixels_to_stre 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess write_pixels_to_stre 
+Command       rtl_gen_preprocess returned 0; 0.01 sec.
+INFO: [HLS 200-0] Preprocessing Module: bubble_sort ...
+Execute       set_default_model bubble_sort 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model bubble_sort 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess bubble_sort 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing Module: filter ...
+Execute       set_default_model filter 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model filter 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess filter 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing Module: read_pixels_from_str ...
+Execute       set_default_model read_pixels_from_str 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model read_pixels_from_str 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess read_pixels_from_str 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing Module: filter_wrapper ...
+Execute       set_default_model filter_wrapper 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model filter_wrapper 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess filter_wrapper 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for synthesis: write_pixels_to_stre bubble_sort filter read_pixels_from_str filter_wrapper
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_pixels_to_stre'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model write_pixels_to_stre 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model write_pixels_to_stre 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'write_pixels_to_stream_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.08 sec.
+INFO: [HLS 200-111]  Elapsed time: 9.38 seconds; current allocated memory: 101.847 MB.
+Execute       report -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.02 sec.
+Execute       db_write -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre.sched.adb -f 
+Command       db_write returned 0; 0 sec.
+INFO: [HLS 200-0] Finish scheduling write_pixels_to_stre.
+Execute       set_default_model write_pixels_to_stre 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model write_pixels_to_stre 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=write_pixels_to_stre
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.01 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 102.065 MB.
+Execute       report -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.01 sec.
+Execute       db_write -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre.bind.adb -f 
+Command       db_write returned 0; 0 sec.
+INFO: [HLS 200-0] Finish binding write_pixels_to_stre.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bubble_sort'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model bubble_sort 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model bubble_sort 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'bubble_sort'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 11.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.19 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 102.708 MB.
+Execute       report -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.05 sec.
+Execute       db_write -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort.sched.adb -f 
+Command       db_write returned 0; 0.01 sec.
+INFO: [HLS 200-0] Finish scheduling bubble_sort.
+Execute       set_default_model bubble_sort 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model bubble_sort 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=bubble_sort
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.09 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 103.652 MB.
+Execute       report -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.27 sec.
+Execute       db_write -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort.bind.adb -f 
+Command       db_write returned 0; 0.02 sec.
+INFO: [HLS 200-0] Finish binding bubble_sort.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'filter'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model filter 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model filter 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'filter_rows_filter_cols'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 14.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.4 seconds; current allocated memory: 104.266 MB.
+Execute       report -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.04 sec.
+Execute       db_write -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter.sched.adb -f 
+Command       db_write returned 0; 0 sec.
+INFO: [HLS 200-0] Finish scheduling filter.
+Execute       set_default_model filter 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model filter 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=filter
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 104.713 MB.
+Execute       report -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.28 sec.
+Execute       db_write -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter.bind.adb -f 
+Command       db_write returned 0; 0.01 sec.
+INFO: [HLS 200-0] Finish binding filter.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_pixels_from_str'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model read_pixels_from_str 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model read_pixels_from_str 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'read_pixels_from_stream_loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.07 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 105.113 MB.
+Execute       report -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.02 sec.
+Execute       db_write -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str.sched.adb -f 
+Command       db_write returned 0; 0 sec.
+INFO: [HLS 200-0] Finish scheduling read_pixels_from_str.
+Execute       set_default_model read_pixels_from_str 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model read_pixels_from_str 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=read_pixels_from_str
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.02 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 105.261 MB.
+Execute       report -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.01 sec.
+Execute       db_write -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str.bind.adb -f 
+Command       db_write returned 0; 0 sec.
+INFO: [HLS 200-0] Finish binding read_pixels_from_str.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'filter_wrapper'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model filter_wrapper 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model filter_wrapper 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.01 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 105.355 MB.
+Execute       report -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0 sec.
+Execute       db_write -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.sched.adb -f 
+Command       db_write returned 0; 0 sec.
+INFO: [HLS 200-0] Finish scheduling filter_wrapper.
+Execute       set_default_model filter_wrapper 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model filter_wrapper 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=filter_wrapper
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.29 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 105.763 MB.
+Execute       report -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.28 sec.
+Execute       db_write -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.bind.adb -f 
+Command       db_write returned 0; 0.01 sec.
+INFO: [HLS 200-0] Finish binding filter_wrapper.
+Execute       get_model_list filter_wrapper -filter all-wo-channel 
+Command       get_model_list returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess write_pixels_to_stre 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess bubble_sort 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess filter 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess read_pixels_from_str 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess filter_wrapper 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for RTL generation: write_pixels_to_stre bubble_sort filter read_pixels_from_str filter_wrapper
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_pixels_to_stre'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model write_pixels_to_stre -vendor xilinx -mg_file /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_pixels_to_stre'.
+Command       create_rtl_model returned 0; 0.01 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 106.421 MB.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl write_pixels_to_stre -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/kinka1/HLS/MedianFilter/solution3/syn/systemc/write_pixels_to_stre -synmodules write_pixels_to_stre bubble_sort filter read_pixels_from_str filter_wrapper 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl write_pixels_to_stre -style xilinx -f -lang vhdl -o /home/kinka1/HLS/MedianFilter/solution3/syn/vhdl/write_pixels_to_stre 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl write_pixels_to_stre -style xilinx -f -lang vlog -o /home/kinka1/HLS/MedianFilter/solution3/syn/verilog/write_pixels_to_stre 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_tb_info write_pixels_to_stre -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre -p /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db 
+Command       gen_tb_info returned 0; 0 sec.
+Execute       report -model write_pixels_to_stre -o /home/kinka1/HLS/MedianFilter/solution3/syn/report/write_pixels_to_stre_csynth.rpt -f 
+Command       report returned 0; 0.02 sec.
+Execute       report -model write_pixels_to_stre -o /home/kinka1/HLS/MedianFilter/solution3/syn/report/write_pixels_to_stre_csynth.xml -f -x 
+Command       report returned 0; 0 sec.
+Execute       report -model write_pixels_to_stre -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre.verbose.rpt -verbose -f 
+Command       report returned 0; 0.02 sec.
+Execute       db_write -model write_pixels_to_stre -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre.adb -f 
+Command       db_write returned 0; 0.02 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bubble_sort'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model bubble_sort -vendor xilinx -mg_file /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bubble_sort'.
+Command       create_rtl_model returned 0; 0.05 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 108.549 MB.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl bubble_sort -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/kinka1/HLS/MedianFilter/solution3/syn/systemc/bubble_sort -synmodules write_pixels_to_stre bubble_sort filter read_pixels_from_str filter_wrapper 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl bubble_sort -style xilinx -f -lang vhdl -o /home/kinka1/HLS/MedianFilter/solution3/syn/vhdl/bubble_sort 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl bubble_sort -style xilinx -f -lang vlog -o /home/kinka1/HLS/MedianFilter/solution3/syn/verilog/bubble_sort 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       gen_tb_info bubble_sort -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort -p /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db 
+Command       gen_tb_info returned 0; 0.08 sec.
+Execute       report -model bubble_sort -o /home/kinka1/HLS/MedianFilter/solution3/syn/report/bubble_sort_csynth.rpt -f 
+Command       report returned 0; 0.09 sec.
+Execute       report -model bubble_sort -o /home/kinka1/HLS/MedianFilter/solution3/syn/report/bubble_sort_csynth.xml -f -x 
+Command       report returned 0; 0.08 sec.
+Execute       report -model bubble_sort -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort.verbose.rpt -verbose -f 
+Command       report returned 0; 0.38 sec.
+Execute       db_write -model bubble_sort -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort.adb -f 
+Command       db_write returned 0; 0.16 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'filter'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model filter -vendor xilinx -mg_file /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'filter'.
+Command       create_rtl_model returned 0; 0.03 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.87 seconds; current allocated memory: 113.516 MB.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl filter -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/kinka1/HLS/MedianFilter/solution3/syn/systemc/filter -synmodules write_pixels_to_stre bubble_sort filter read_pixels_from_str filter_wrapper 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl filter -style xilinx -f -lang vhdl -o /home/kinka1/HLS/MedianFilter/solution3/syn/vhdl/filter 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl filter -style xilinx -f -lang vlog -o /home/kinka1/HLS/MedianFilter/solution3/syn/verilog/filter 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       gen_tb_info filter -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter -p /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db 
+Command       gen_tb_info returned 0; 0.01 sec.
+Execute       report -model filter -o /home/kinka1/HLS/MedianFilter/solution3/syn/report/filter_csynth.rpt -f 
+Command       report returned 0; 0.03 sec.
+Execute       report -model filter -o /home/kinka1/HLS/MedianFilter/solution3/syn/report/filter_csynth.xml -f -x 
+Command       report returned 0; 0.01 sec.
+Execute       report -model filter -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter.verbose.rpt -verbose -f 
+Command       report returned 0; 0.3 sec.
+Execute       db_write -model filter -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter.adb -f 
+Command       db_write returned 0; 0.06 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_pixels_from_str'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model read_pixels_from_str -vendor xilinx -mg_file /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_pixels_from_str'.
+Command       create_rtl_model returned 0; 0.01 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 115.128 MB.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl read_pixels_from_str -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/kinka1/HLS/MedianFilter/solution3/syn/systemc/read_pixels_from_str -synmodules write_pixels_to_stre bubble_sort filter read_pixels_from_str filter_wrapper 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl read_pixels_from_str -style xilinx -f -lang vhdl -o /home/kinka1/HLS/MedianFilter/solution3/syn/vhdl/read_pixels_from_str 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl read_pixels_from_str -style xilinx -f -lang vlog -o /home/kinka1/HLS/MedianFilter/solution3/syn/verilog/read_pixels_from_str 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_tb_info read_pixels_from_str -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str -p /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db 
+Command       gen_tb_info returned 0; 0.02 sec.
+Execute       report -model read_pixels_from_str -o /home/kinka1/HLS/MedianFilter/solution3/syn/report/read_pixels_from_str_csynth.rpt -f 
+Command       report returned 0; 0 sec.
+Execute       report -model read_pixels_from_str -o /home/kinka1/HLS/MedianFilter/solution3/syn/report/read_pixels_from_str_csynth.xml -f -x 
+Command       report returned 0; 0.01 sec.
+Execute       report -model read_pixels_from_str -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str.verbose.rpt -verbose -f 
+Command       report returned 0; 0.03 sec.
+Execute       db_write -model read_pixels_from_str -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str.adb -f 
+Command       db_write returned 0; 0.04 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'filter_wrapper'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model filter_wrapper -vendor xilinx -mg_file /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'filter_wrapper/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'filter_wrapper/in_array' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'filter_wrapper/out_array' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'filter_wrapper' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'in_array' and 'out_array' to AXI-Lite port AXILiteS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'filter_wrapper'.
+Command       create_rtl_model returned 0; 0.01 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 116.378 MB.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl filter_wrapper -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/kinka1/HLS/MedianFilter/solution3/syn/systemc/filter_wrapper -synmodules write_pixels_to_stre bubble_sort filter read_pixels_from_str filter_wrapper 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl filter_wrapper -istop -style xilinx -f -lang vhdl -o /home/kinka1/HLS/MedianFilter/solution3/syn/vhdl/filter_wrapper 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       gen_rtl filter_wrapper -istop -style xilinx -f -lang vlog -o /home/kinka1/HLS/MedianFilter/solution3/syn/verilog/filter_wrapper 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       export_constraint_db -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.constraint.tcl -f -tool general 
+Command       export_constraint_db returned 0; 0 sec.
+Execute       report -model filter_wrapper -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.design.xml -verbose -f -dv 
+Command       report returned 0; 0.25 sec.
+Execute       report -model filter_wrapper -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.sdaccel.xml -verbose -f -sdaccel 
+Command       report returned 0; 0.02 sec.
+Execute       gen_tb_info filter_wrapper -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper -p /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db 
+Command       gen_tb_info returned 0; 0.01 sec.
+Execute       report -model filter_wrapper -o /home/kinka1/HLS/MedianFilter/solution3/syn/report/filter_wrapper_csynth.rpt -f 
+Command       report returned 0; 0.01 sec.
+Execute       report -model filter_wrapper -o /home/kinka1/HLS/MedianFilter/solution3/syn/report/filter_wrapper_csynth.xml -f -x 
+Command       report returned 0; 0 sec.
+Execute       report -model filter_wrapper -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.verbose.rpt -verbose -f 
+Command       report returned 0; 0.3 sec.
+Execute       db_write -model filter_wrapper -o /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.adb -f 
+Command       db_write returned 0; 0.04 sec.
+Execute       sc_get_clocks filter_wrapper 
+Command       sc_get_clocks returned 0; 0 sec.
+Execute       sc_get_portdomain filter_wrapper 
+Command       sc_get_portdomain returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for RTL component generation: write_pixels_to_stre bubble_sort filter read_pixels_from_str filter_wrapper
+INFO: [HLS 200-0] Handling components in module [write_pixels_to_stre] ... 
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Handling components in module [bubble_sort] ... 
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Handling components in module [filter] ... 
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter.compgen.tcl 
+INFO: [HLS 200-0] Found component filter_temp_array_0.
+INFO: [HLS 200-0] Append model filter_temp_array_0
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Handling components in module [read_pixels_from_str] ... 
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Handling components in module [filter_wrapper] ... 
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.compgen.tcl 
+INFO: [HLS 200-0] Found component fifo_w32_d1024_A.
+INFO: [HLS 200-0] Append model fifo_w32_d1024_A
+INFO: [HLS 200-0] Found component fifo_w32_d2_A.
+INFO: [HLS 200-0] Append model fifo_w32_d2_A
+INFO: [HLS 200-0] Found component fifo_w32_d1024_A.
+INFO: [HLS 200-0] Append model fifo_w32_d1024_A
+INFO: [HLS 200-0] Found component start_for_filter_U0.
+INFO: [HLS 200-0] Append model start_for_filter_U0
+INFO: [HLS 200-0] Found component filter_wrapper_AXILiteS_s_axi.
+INFO: [HLS 200-0] Append model filter_wrapper_AXILiteS_s_axi
+INFO: [HLS 200-0] Found component filter_wrapper_gmem_m_axi.
+INFO: [HLS 200-0] Append model filter_wrapper_gmem_m_axi
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Append model write_pixels_to_stre
+INFO: [HLS 200-0] Append model bubble_sort
+INFO: [HLS 200-0] Append model filter
+INFO: [HLS 200-0] Append model read_pixels_from_str
+INFO: [HLS 200-0] Append model filter_wrapper
+INFO: [HLS 200-0] Generating RTL model list ...
+INFO: [HLS 200-0] All models in this session: filter_temp_array_0 fifo_w32_d1024_A fifo_w32_d2_A fifo_w32_d1024_A start_for_filter_U0 filter_wrapper_AXILiteS_s_axi filter_wrapper_gmem_m_axi write_pixels_to_stre bubble_sort filter read_pixels_from_str filter_wrapper
+INFO: [HLS 200-0] To file: write model filter_temp_array_0
+INFO: [HLS 200-0] To file: write model fifo_w32_d1024_A
+INFO: [HLS 200-0] To file: write model fifo_w32_d2_A
+INFO: [HLS 200-0] To file: write model fifo_w32_d1024_A
+INFO: [HLS 200-0] To file: write model start_for_filter_U0
+INFO: [HLS 200-0] To file: write model filter_wrapper_AXILiteS_s_axi
+INFO: [HLS 200-0] To file: write model filter_wrapper_gmem_m_axi
+INFO: [HLS 200-0] To file: write model write_pixels_to_stre
+INFO: [HLS 200-0] To file: write model bubble_sort
+INFO: [HLS 200-0] To file: write model filter
+INFO: [HLS 200-0] To file: write model read_pixels_from_str
+INFO: [HLS 200-0] To file: write model filter_wrapper
+INFO: [HLS 200-0] Finished generating RTL model list.
+
+
+INFO: [HLS 200-0] RTL Generation done.
+INFO: [HLS 200-0] CAS Generation done.
+INFO: [HLS 200-0] CBC Generation done.
+Execute       export_ssdm /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/a.export.ll 
+Command       export_ssdm returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.07 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.1 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.1 sec.
+Command       ap_source returned 0; 0.1 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'filter_temp_array_0_ram (RAM)' using block RAMs.
+Command       ap_source returned 0; 0.02 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.compgen.tcl 
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_w32_d1024_A' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_w32_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'fifo_w32_d1024_A' using Block RAMs.
+Execute         source ./AXILiteS.slave.tcl 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.08 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.08 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.1 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.11 sec.
+Command       ap_source returned 0; 0.11 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.compgen.tcl 
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/write_pixels_to_stre.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/bubble_sort.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/read_pixels_from_str.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.constraint.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/filter_wrapper.constraint.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       sc_get_clocks filter_wrapper 
+Command       sc_get_clocks returned 0; 0 sec.
+Execute       source /home/kinka1/HLS/MedianFilter/solution3/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 481.613 ; gain = 141.578 ; free physical = 11650 ; free virtual = 14852
+INFO: [SYSC 207-301] Generating SystemC RTL for filter_wrapper.
+INFO: [VHDL 208-304] Generating VHDL RTL for filter_wrapper.
+INFO: [VLOG 209-307] Generating Verilog RTL for filter_wrapper.
+Command     autosyn returned 0; 4.96 sec.
+Command   csynth_design returned 0; 13.68 sec.
+Command ap_source returned 0; 13.98 sec.
+Execute cleanup_all 
+Command cleanup_all returned 0; 0.01 sec.

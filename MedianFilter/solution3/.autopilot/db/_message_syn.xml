@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;MedianFilter/median.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;STREAM&apos; cannot be applied: Function &apos;conv_stream&apos; does not exist in any synthesis source file." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;STREAM&apos; cannot be applied: Function &apos;conv_stream&apos; does not exist in any synthesis source file." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;UNROLL&apos; cannot be applied: Label &apos;bubble_sort_outer_loop&apos; does not exist in function &apos;bubble_sort&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;PIPELINE&apos; cannot be applied: Label &apos;conv_cols&apos; does not exist in function &apos;filter&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 353.613 ; gain = 13.578 ; free physical = 11731 ; free virtual = 14925" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 353.613 ; gain = 13.578 ; free physical = 11730 ; free virtual = 14925" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 353.613 ; gain = 13.578 ; free physical = 11728 ; free virtual = 14923" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 353.613 ; gain = 13.578 ; free physical = 11729 ; free virtual = 14924" tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;filter_cols&apos; (MedianFilter/median.cpp:51) in function &apos;filter&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;bubble_sort&apos; (MedianFilter/median.cpp:20)." tag=""/>
+	<Message prefix="[XFORM 203-505]" severity="WARNING" keynum="814" content="Ignored pipeline directive for loop &apos;bubble_sort_mapping&apos; (MedianFilter/median.cpp:26) because its parent loop or function is pipelined." tag=""/>
+	<Message prefix="[XFORM 203-505]" severity="WARNING" keynum="814" content="Ignored pipeline directive for loop &apos;bubble_sort_inner_loop&apos; (MedianFilter/median.cpp:32) because its parent loop or function is pipelined." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1.1.1&apos; (MedianFilter/median.cpp:56) in function &apos;filter&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1.1.1.1&apos; (MedianFilter/median.cpp:57) in function &apos;filter&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1.1.2&apos; (MedianFilter/median.cpp:60) in function &apos;filter&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1.1.3&apos; (MedianFilter/median.cpp:65) in function &apos;filter&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1&apos; (MedianFilter/median.cpp:24) in function &apos;bubble_sort&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;bubble_sort_mapping&apos; (MedianFilter/median.cpp:26) in function &apos;bubble_sort&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-2&apos; (MedianFilter/median.cpp:31) in function &apos;bubble_sort&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;bubble_sort_inner_loop&apos; (MedianFilter/median.cpp:32) in function &apos;bubble_sort&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="696" content="Partitioning array &apos;CROP.0&apos; automatically." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="696" content="Partitioning array &apos;CROP.1&apos; automatically." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="696" content="Partitioning array &apos;CROP.2&apos; automatically." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="697" content="Partitioning array &apos;temp_array&apos; (MedianFilter/median.cpp:47) in dimension 1 automatically." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="697" content="Partitioning array &apos;crop&apos; (MedianFilter/median.cpp:48) in dimension 1 automatically." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="696" content="Partitioning array &apos;crop.0&apos; (MedianFilter/median.cpp:48) automatically." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="696" content="Partitioning array &apos;crop.1&apos; (MedianFilter/median.cpp:48) automatically." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="696" content="Partitioning array &apos;crop.2&apos; (MedianFilter/median.cpp:48) automatically." tag=""/>
+	<Message prefix="[XFORM 203-712]" severity="INFO" keynum="801" content="Applying dataflow to function &apos;filter_wrapper&apos; (MedianFilter/median.cpp:76), detected/extracted 3 process function(s): 
+	 &apos;write_pixels_to_stream&apos;
+	 &apos;filter&apos;
+	 &apos;read_pixels_from_stream&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 481.613 ; gain = 141.578 ; free physical = 11708 ; free virtual = 14903" tag=""/>
+	<Message prefix="[XFORM 203-541]" severity="INFO" keynum="789" content="Flattening a loop nest &apos;filter_rows&apos; (MedianFilter/median.cpp:50:45) in function &apos;filter&apos;." tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;write_pixels_to_stream&apos; to &apos;write_pixels_to_stre&apos; (MedianFilter/median.cpp:5:59)" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;read_pixels_from_stream&apos; to &apos;read_pixels_from_str&apos; (MedianFilter/median.cpp:13:60)" tag=""/>
+	<Message prefix="[XFORM 203-811]" severity="INFO" keynum="821" content="Inferring bus burst write of length 357604 on port &apos;out_array&apos; (MedianFilter/median.cpp:16:3)." tag=""/>
+	<Message prefix="[XFORM 203-811]" severity="INFO" keynum="821" content="Inferring bus burst read of length 360000 on port &apos;in_array&apos; (MedianFilter/median.cpp:6:32)." tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;write_pixels_to_stre13&apos; to &apos;write_pixels_to_stre&apos; (MedianFilter/median.cpp:5:59)" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 481.613 ; gain = 141.578 ; free physical = 11681 ; free virtual = 14876" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;filter_wrapper&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;write_pixels_to_stre&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;write_pixels_to_stream_loop&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 3." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 9.38 seconds; current allocated memory: 101.847 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.03 seconds; current allocated memory: 102.065 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;bubble_sort&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;bubble_sort&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 11." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.2 seconds; current allocated memory: 102.708 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.15 seconds; current allocated memory: 103.652 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;filter&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;filter_rows_filter_cols&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 14." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.4 seconds; current allocated memory: 104.266 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.15 seconds; current allocated memory: 104.713 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;read_pixels_from_str&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;read_pixels_from_stream_loop&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 3." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.37 seconds; current allocated memory: 105.113 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.04 seconds; current allocated memory: 105.261 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;filter_wrapper&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.03 seconds; current allocated memory: 105.355 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.29 seconds; current allocated memory: 105.763 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;write_pixels_to_stre&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;write_pixels_to_stre&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.3 seconds; current allocated memory: 106.421 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;bubble_sort&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;bubble_sort&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.13 seconds; current allocated memory: 108.549 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;filter&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;filter&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.87 seconds; current allocated memory: 113.516 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;read_pixels_from_str&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;read_pixels_from_str&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.45 seconds; current allocated memory: 115.128 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;filter_wrapper&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;filter_wrapper/gmem&apos; to &apos;m_axi&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;filter_wrapper/in_array&apos; to &apos;s_axilite &amp; ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;filter_wrapper/out_array&apos; to &apos;s_axilite &amp; ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;filter_wrapper&apos; to &apos;s_axilite &amp; ap_ctrl_hs&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="364" content="Bundling port &apos;return&apos;, &apos;in_array&apos; and &apos;out_array&apos; to AXI-Lite port AXILiteS." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;filter_wrapper&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.12 seconds; current allocated memory: 116.378 MB." tag=""/>
+	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1790" content="Implementing memory &apos;filter_temp_array_0_ram (RAM)&apos; using block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w32_d1024_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w32_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;fifo_w32_d1024_A&apos; using Block RAMs." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 481.613 ; gain = 141.578 ; free physical = 11650 ; free virtual = 14852" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for filter_wrapper." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for filter_wrapper." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for filter_wrapper." tag=""/>
+	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 14.26 seconds; peak allocated memory: 116.378 MB." tag=""/>
+</Messages>

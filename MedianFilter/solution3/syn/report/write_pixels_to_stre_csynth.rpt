@@ -1,0 +1,212 @@
+
+
+================================================================
+== Vivado HLS Report for 'write_pixels_to_stre'
+================================================================
+* Date:           Thu Dec  6 13:20:26 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        MedianFilter
+* Solution:       solution3
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.75|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  360009|  360009|  360009|  360009|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------+--------+--------+----------+-----------+-----------+--------+----------+
+        |                               |     Latency     | Iteration|  Initiation Interval  |  Trip  |          |
+        |           Loop Name           |   min  |   max  |  Latency |  achieved |   target  |  Count | Pipelined|
+        +-------------------------------+--------+--------+----------+-----------+-----------+--------+----------+
+        |- write_pixels_to_stream_loop  |  360001|  360001|         3|          1|          1|  360000|    yes   |
+        +-------------------------------+--------+--------+----------+-----------+-----------+--------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    100|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    137|
+|Register         |        -|      -|      68|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|      68|    237|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |i_fu_171_p2                        |     +    |      0|  0|  26|          19|           1|
+    |ap_block_state10_pp0_stage0_iter2  |    and   |      0|  0|   8|           1|           1|
+    |ap_block_state9_pp0_stage0_iter1   |    and   |      0|  0|   8|           1|           1|
+    |ap_condition_298                   |    and   |      0|  0|   8|           1|           1|
+    |exitcond_i_i_fu_165_p2             |   icmp   |      0|  0|  18|          19|          19|
+    |ap_block_pp0_stage0_01001          |    or    |      0|  0|   8|           1|           1|
+    |ap_block_state1                    |    or    |      0|  0|   8|           1|           1|
+    |ap_enable_pp0                      |    xor   |      0|  0|   8|           1|           2|
+    |ap_enable_reg_pp0_iter1            |    xor   |      0|  0|   8|           2|           1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                              |          |      0|  0| 100|          46|          28|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                              |  47|         10|    1|         10|
+    |ap_done                                |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2                |   9|          2|    1|          2|
+    |ap_sig_ioackin_m_axi_in_array_ARREADY  |   9|          2|    1|          2|
+    |i_i_i_reg_133                          |   9|          2|   19|         38|
+    |in_array_blk_n_AR                      |   9|          2|    1|          2|
+    |in_array_blk_n_R                       |   9|          2|    1|          2|
+    |in_stream_V_blk_n                      |   9|          2|    1|          2|
+    |out_array_out_blk_n                    |   9|          2|    1|          2|
+    |real_start                             |   9|          2|    1|          2|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  | 137|         30|   29|         66|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------+----+----+-----+-----------+
+    |                  Name                 | FF | LUT| Bits| Const Bits|
+    +---------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                              |   9|   0|    9|          0|
+    |ap_done_reg                            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                |   1|   0|    1|          0|
+    |ap_reg_ioackin_m_axi_in_array_ARREADY  |   1|   0|    1|          0|
+    |ap_reg_pp0_iter1_exitcond_i_i_reg_183  |   1|   0|    1|          0|
+    |exitcond_i_i_reg_183                   |   1|   0|    1|          0|
+    |i_i_i_reg_133                          |  19|   0|   19|          0|
+    |start_once_reg                         |   1|   0|    1|          0|
+    |temp_reg_192                           |  32|   0|   32|          0|
+    +---------------------------------------+----+----+-----+-----------+
+    |Total                                  |  68|   0|   68|          0|
+    +---------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+----------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                   |  in |    1| ap_ctrl_hs | write_pixels_to_stre | return value |
+|ap_rst                   |  in |    1| ap_ctrl_hs | write_pixels_to_stre | return value |
+|ap_start                 |  in |    1| ap_ctrl_hs | write_pixels_to_stre | return value |
+|start_full_n             |  in |    1| ap_ctrl_hs | write_pixels_to_stre | return value |
+|ap_done                  | out |    1| ap_ctrl_hs | write_pixels_to_stre | return value |
+|ap_continue              |  in |    1| ap_ctrl_hs | write_pixels_to_stre | return value |
+|ap_idle                  | out |    1| ap_ctrl_hs | write_pixels_to_stre | return value |
+|ap_ready                 | out |    1| ap_ctrl_hs | write_pixels_to_stre | return value |
+|start_out                | out |    1| ap_ctrl_hs | write_pixels_to_stre | return value |
+|start_write              | out |    1| ap_ctrl_hs | write_pixels_to_stre | return value |
+|in_stream_V_din          | out |   32|   ap_fifo  |      in_stream_V     |    pointer   |
+|in_stream_V_full_n       |  in |    1|   ap_fifo  |      in_stream_V     |    pointer   |
+|in_stream_V_write        | out |    1|   ap_fifo  |      in_stream_V     |    pointer   |
+|m_axi_in_array_AWVALID   | out |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_AWREADY   |  in |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_AWADDR    | out |   32|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_AWID      | out |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_AWLEN     | out |   32|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_AWSIZE    | out |    3|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_AWBURST   | out |    2|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_AWLOCK    | out |    2|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_AWCACHE   | out |    4|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_AWPROT    | out |    3|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_AWQOS     | out |    4|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_AWREGION  | out |    4|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_AWUSER    | out |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_WVALID    | out |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_WREADY    |  in |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_WDATA     | out |   32|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_WSTRB     | out |    4|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_WLAST     | out |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_WID       | out |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_WUSER     | out |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARVALID   | out |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARREADY   |  in |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARADDR    | out |   32|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARID      | out |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARLEN     | out |   32|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARSIZE    | out |    3|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARBURST   | out |    2|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARLOCK    | out |    2|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARCACHE   | out |    4|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARPROT    | out |    3|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARQOS     | out |    4|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARREGION  | out |    4|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_ARUSER    | out |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_RVALID    |  in |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_RREADY    | out |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_RDATA     |  in |   32|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_RLAST     |  in |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_RID       |  in |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_RUSER     |  in |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_RRESP     |  in |    2|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_BVALID    |  in |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_BREADY    | out |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_BRESP     |  in |    2|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_BID       |  in |    1|    m_axi   |       in_array       |    pointer   |
+|m_axi_in_array_BUSER     |  in |    1|    m_axi   |       in_array       |    pointer   |
+|in_array_offset          |  in |   32|   ap_none  |    in_array_offset   |    scalar    |
+|out_array                |  in |   32|   ap_none  |       out_array      |    scalar    |
+|out_array_out_din        | out |   32|   ap_fifo  |     out_array_out    |    pointer   |
+|out_array_out_full_n     |  in |    1|   ap_fifo  |     out_array_out    |    pointer   |
+|out_array_out_write      | out |    1|   ap_fifo  |     out_array_out    |    pointer   |
++-------------------------+-----+-----+------------+----------------------+--------------+
+
